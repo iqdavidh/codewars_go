@@ -29,3 +29,7 @@ func Solution(texto string) []string {
 
 	return respuesta
 }
+
+func main() {
+
+}

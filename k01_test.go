@@ -1,4 +1,4 @@
-package kata_test
+package katatest
 
 import (
 	"curso/codewars/codewarrior/kata"
