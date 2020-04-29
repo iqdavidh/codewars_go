@@ -15,15 +15,20 @@ func TestEventOrOdd(t *testing.T) {
 
 	a := assert.New(t)
 
-	{
-		respuestaEsperada := "Odd"
-		respuesta := EventOrOdd(1)
-		a.Equal(respuestaEsperada, respuesta, fmt.Sprintf("error , tenemos  %v esperamos %v", respuesta, respuesta))
+	listaPrueba := [4]dataPrueba{
+		{num: 1, respuestaEsperada: "Odd"},
+		{num: 2, respuestaEsperada: "Even"},
+		{num: -1, respuestaEsperada: "Odd"},
+		{num: -2, respuestaEsperada: "Even"},
 	}
 
-	{
-		respuestaEsperada := "Even"
-		respuesta := EventOrOdd(2)
-		a.Equal(respuestaEsperada, respuesta, fmt.Sprintf("error , tenemos  %v esperamos %v", respuesta, respuesta))
+	for _, itemPrueba := range listaPrueba {
+		respuesta := EventOrOdd(itemPrueba.num)
+		a.Equal(itemPrueba.respuestaEsperada, respuesta, fmt.Sprintf("error , tenemos  %v esperamos %v", respuesta, itemPrueba.respuestaEsperada))
 	}
+}
+
+type dataPrueba struct {
+	num               int
+	respuestaEsperada string
 }
