@@ -11,7 +11,7 @@ package kata
 //Solution("abcdef") //should return ["ab", "cd", "ef"]
 //
 
-func Solution(texto string) []string {
+func SplitStrings(texto string) []string {
 
 	size := len(texto)
 	if size%2 > 0 {
