@@ -16,7 +16,6 @@ import (
 //Patrick Feeney => P.F
 
 func AbbrevName(name string) string {
-	//your code here
 
 	lista := strings.Split(name, " ")
 	abrev := ""
