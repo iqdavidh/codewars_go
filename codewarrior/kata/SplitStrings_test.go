@@ -8,9 +8,9 @@ import (
 
 func TestSomething(t *testing.T) {
 
-	var a = assert.New(t)
+	a := assert.New(t)
 
-	var respuestaEsperada = []string{"ab", "c_"}
-	var respuesta = SplitStrings("abc")
+	respuestaEsperada := []string{"ab", "c_"}
+	respuesta := SplitStrings("abc")
 	a.Equal(respuestaEsperada, respuesta, fmt.Sprintf("error , tenemos  %v esperamos %v", respuesta, respuesta))
 }

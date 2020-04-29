@@ -8,11 +8,11 @@ import (
 
 func TestAbrev(t *testing.T) {
 
-	var a = assert.New(t)
+	a := assert.New(t)
 
 	{
 		respuestaEsperada := "S.H"
-		var respuesta = AbbrevName("Sam Harris")
+		respuesta := AbbrevName("Sam Harris")
 		a.Equal(respuestaEsperada, respuesta, fmt.Sprintf("error , tenemos  %v esperamos %v", respuesta, respuesta))
 	}
 
