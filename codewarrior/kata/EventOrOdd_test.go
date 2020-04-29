@@ -6,10 +6,10 @@ import (
 	"testing"
 )
 
-//Expect(EvenOrOdd(1)).To(Equal("Odd"))
-//Expect(EvenOrOdd(2)).To(Equal("Even"))
-//Expect(EvenOrOdd(-1)).To(Equal("Odd"))
-//Expect(EvenOrOdd(-2)).To(Equal("Even"))
+type dataPrueba struct {
+	num               int
+	respuestaEsperada string
+}
 
 func TestEventOrOdd(t *testing.T) {
 
@@ -26,9 +26,4 @@ func TestEventOrOdd(t *testing.T) {
 		respuesta := EventOrOdd(itemPrueba.num)
 		a.Equal(itemPrueba.respuestaEsperada, respuesta, fmt.Sprintf("error , tenemos  %v esperamos %v", respuesta, itemPrueba.respuestaEsperada))
 	}
-}
-
-type dataPrueba struct {
-	num               int
-	respuestaEsperada string
 }
