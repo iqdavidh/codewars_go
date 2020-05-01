@@ -1,6 +1,26 @@
 package kata
 
-import "testing"
+import (
+	"strings"
+	"testing"
+)
+
+type MyString string
+
+func (s MyString) IsUpperCase() bool {
+	// Your code here!
+
+	sUpper := strings.ToUpper(string(s))
+	return s == MyString(sUpper)
+}
+
+func MakeNegative(x int) int {
+	if x <= 0 {
+		return x
+	}
+
+	return -x
+}
 
 func TestDNAtoRNA(t *testing.T) {
 	type args struct {
