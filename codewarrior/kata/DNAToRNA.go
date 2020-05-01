@@ -21,6 +21,11 @@ import "strings"
 
 func DNAtoRNA(dna string) string {
 
-	respuesta := strings.Replace(dna, "T", "U", -1)
+	//respuesta := strings.Replace(dna, "T", "U", -1) n es el numero de veces a reemplazar
+
+	respuesta := strings.ReplaceAll(dna, "T", "U")
+
+	//otra forma strings.Join(strings.Split(dna, "T"), "U")
+
 	return respuesta
 }
