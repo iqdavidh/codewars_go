@@ -15,6 +15,11 @@ import (
 //
 //Patrick Feeney => P.F
 
+func RemoveChar(word string) string {
+
+	return word[1 : len(word)-1]
+}
+
 func AbbrevName(name string) string {
 
 	lista := strings.Split(name, " ")
